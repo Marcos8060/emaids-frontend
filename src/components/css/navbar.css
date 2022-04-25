@@ -1,0 +1,60 @@
+.navbar-brand{
+    font-weight: bold;
+    font-family: poppins;
+    font-size: 27px;
+    color: black;
+}
+.navbar-brand:hover{
+    color: black;
+}
+
+.nav-link{
+    font-family: Nunito;
+    color: black;
+}
+.nav-link:hover{
+    color: black;
+}
+.navbar{
+    background: var(--white);
+    box-shadow: 0px 1px 10px 1px lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar > div > h2{
+    font-family: poppins;
+    font-weight: bolder;
+}
+.input{
+    border-right: none;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    width: 40vh;
+}
+.input:focus{
+    box-shadow: none;
+}
+.navbar > div > .btn{
+    outline: 1px solid var(--headfoot);
+    margin: 3px;
+}
+.navbar > div > .btn:hover{
+    background: var(--headfoot);
+    color: var(--white);
+    transition: 1s;
+}
+.navbar > div > .btn:focus{
+    box-shadow: none;
+}
+.btn7{
+    background: var(--buttons);
+    border: none;
+    color: var(--white);
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 10px;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}

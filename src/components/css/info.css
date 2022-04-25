@@ -1,0 +1,29 @@
+.app__info{
+    background: var(--white);
+    padding-top: 12vh;
+    font-family: poppins;
+    margin-bottom: 10vh;
+}
+.underline{
+    border-bottom: 3px solid var(--buttons);
+    width: 40%;
+    margin: auto;
+}
+span{
+    color: var(--buttons)!important;
+}
+.MuiSvgIcon-root{
+    color: var(--buttons);
+}
+.top{
+    margin-bottom: 14vh;
+}
+span{
+    margin: 20px;
+    font-weight: bold;
+}
+.text{
+    margin-left: 40px;
+    margin-top: 10px;
+    font-size: 14px;
+}

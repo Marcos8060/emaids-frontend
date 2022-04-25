@@ -1,0 +1,37 @@
+<form className="editForm">
+                  <label htmlFor="fullname" className="form-label">
+                    Full Name
+                  </label>
+                  <input value={formData.full_name} name="full_name" type="text" className="form-control" onChange={handleChange}/>
+                  <label htmlFor="email" className="form-label">
+                    Email
+                  </label>
+                  <input value={formData.email} name="email" type="email" className="form-control" onChange={handleChange} />
+                  <label htmlFor="age" className="form-label">
+                    Age
+                  </label>
+                  <input value={formData.age} name="age" type="number" className="form-control" onChange={handleChange} />
+                  <label htmlFor="location" className="form-label">
+                    Location
+                  </label>
+                  <input value={formData.location} name="location" type="text" className="form-control" onChange={handleChange} />
+                  <label htmlFor="experience" className="form-label">
+                    Experience
+                  </label>
+                  <input value={formData.experience} name="experience" type="number" className="form-control" onChange={handleChange} />
+                  <label htmlFor="Bio" className="form-label">
+                    Bio
+                  </label>
+                  <textarea
+                    name="bio"
+                    value={formData.bio}
+                    id=""
+                    cols="30"
+                    rows="4"
+                    className="form-control"
+                    onChange={handleChange}
+                  ></textarea>
+                  <button onClick={handleSubmit} className="btn-secondary mt-3" type="submit">
+                    Edit
+                  </button>
+                </form>

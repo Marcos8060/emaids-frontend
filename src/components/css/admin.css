@@ -1,0 +1,9 @@
+.app__adminView{
+    background: var(--profile);
+}
+h2{
+    font-family: poppins;
+}
+.table{
+    margin-bottom: 10vh;
+}

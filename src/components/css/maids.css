@@ -1,0 +1,57 @@
+.app__maids{
+    background: var(--profile);
+    padding-bottom: 10vh;
+    padding-top: 3vh;
+}
+.item{
+    text-align: center;
+    padding-top: 4vh;
+    padding-bottom: 3vh;
+    background: var(--white);
+    box-shadow: 0px 1px 14px 1px lightgray;
+    margin-top: 3vh;
+    border-radius:7px;
+    height: 50vh;
+}
+.profile__img{
+    height: 70px;
+    width: 70px;
+    border-radius: 999px;
+    object-fit: cover;
+}
+.btn2{
+    background: transparent;
+    border: none;
+    outline: 1px solid var(--headfoot);
+    padding: 10px;
+}
+.btn2:hover{
+    background: var(--headfoot);
+    color: var(--white);
+    transition: 1s;
+    outline: 1px solid var(--headfoot);
+}
+.searchInput{
+    border-radius: 30px;
+}
+.profile__form > input:focus{
+    box-shadow: none;
+}
+.profile__form > textarea:focus{
+    box-shadow: none;
+}
+.profile__form > select:focus{
+    box-shadow: none;
+}
+.btn-secondary{
+    background: var(--headfoot);
+    width: 100%;
+    border: none;
+    height: 2rem;
+}
+.btn-secondary:hover{
+    background: var(--headfoot);
+}
+.alertInfo{
+    color: #52AA29;
+}

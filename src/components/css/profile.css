@@ -1,0 +1,46 @@
+.app__profile{
+    background: var(--profile);
+    padding-top: 8vh;
+    padding-bottom: 7vh;
+}
+.profile__photo{
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.btn3{
+    background: var(--buttons);
+    border: none;
+    color: var(--white);
+    padding: 10px;
+}
+.bio__underline{
+    border-bottom: 1px solid var(--buttons);
+    margin-top: 10vh;
+}
+.reviews{
+    background: var(--white);
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+.comment__input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.comment__input:focus{
+    box-shadow: none;
+}
+.btn4{
+    background: transparent;
+    border: none;
+    color: var(--buttons);
+    padding: 4px;
+}
+.comment__text{
+    font-size: 14px;
+}
+.user,.date{
+    font-size: 13px;
+}

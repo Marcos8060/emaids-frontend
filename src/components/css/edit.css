@@ -1,0 +1,12 @@
+.editForm > div > div > input:focus{
+    box-shadow: none;
+}
+.editForm > div > div > textarea:focus{
+    box-shadow: none;
+}
+.editCard{
+    margin: auto;
+}
+.btn-secondary{
+    border-radius: 3px;
+}

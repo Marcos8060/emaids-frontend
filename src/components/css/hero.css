@@ -1,0 +1,27 @@
+.app__hero{
+    background: var(--primary);
+    padding-top: 25px;
+}
+.hero__content{
+    display: flex;
+    align-items: center;
+}
+.col-md-5 > h2{
+    font-family: poppins;
+    font-weight: bold;
+}
+.btn1{
+    background: var(--buttons);
+    color: var(--white);
+    font-family: poppins;
+    border: none;
+    height: 40px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.background{
+    position: relative;
+    background: var(--white);
+    border-radius: 999px;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Nunito+Sans:wght@600&family=Nunito:wght@600&family=Poppins:wght@200;400;500;600;700&display=swap');
+
+body{
+  font-family: Nunito;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* color variables */
+:root{
+  --primary: #F5F5F5;
+  --headfoot: #103460;
+  --white : #ffffff;
+  --buttons: #D24257;
+  --profile: #F6F9FC;
+}

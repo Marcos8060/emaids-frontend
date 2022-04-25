@@ -1,0 +1,8 @@
+.app__search{
+    background-color: var(--profile);
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+}
+h3{
+    font-family: poppins;
+}

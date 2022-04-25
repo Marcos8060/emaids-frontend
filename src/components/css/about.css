@@ -1,0 +1,11 @@
+.app__about{
+    font-family: poppins;
+    padding-bottom: 10vh;
+}
+.app__about > img{
+    width: 100%;
+    object-fit: conntain;
+}
+p{
+    font-family: Nunito;
+}

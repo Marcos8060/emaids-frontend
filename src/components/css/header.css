@@ -1,0 +1,15 @@
+.header{
+    background: var(--headfoot);
+    display: flex;
+    align-items: center;
+    color: var(--white) !important;
+    font-size: 13px;
+}
+.header > div{
+    margin: 10px;
+}
+.header > div > .MuiSvgIcon-root{
+    /* height: 13px; */
+    margin-top: 4px;
+    color: var(--white);
+}
