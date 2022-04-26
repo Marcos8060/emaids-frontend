@@ -65,7 +65,6 @@ function Profile() {
             <div className="col-md-8 bio">
               <h3>About Me</h3>
               <p>{profile.bio}</p>
-              <button className="btn3">Hire Me</button>
               <a href={"/edit/" + profile.id}>
                 <button className="btn3 m-2">Edit Profile</button>
               </a>

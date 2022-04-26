@@ -1,6 +1,7 @@
 import React from 'react'
 import './css/hero.css'
 import hero from '../images/hero.png'
+import {Link} from 'react-router-dom'
 
 function Hero() {
   return (
@@ -15,7 +16,7 @@ function Hero() {
                 </div>
                 <div className="col-md-5">
                     <h2>Hire some of  the most professional house maids within Nairobi County.</h2>
-                    <a href='/maids'><button className='btn1 mt-4 mb-3'>Available Maids</button></a>
+                    <Link to='/maids'><button className='btn1 mt-4 mb-3'>Available Maids</button></Link>
                 </div>
               </div>
           </div>

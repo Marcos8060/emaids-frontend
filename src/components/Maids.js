@@ -12,7 +12,6 @@ import withReactContent from 'sweetalert2-react-content'
 
 const MySwal = withReactContent(Swal)
 
-const url = "http://127.0.0.1:8000/api/profiles/";
 function Maids() {
 
   let history = useNavigate();
@@ -30,31 +29,23 @@ function Maids() {
   const [data, setData] = useState({ search: "" });
   const [profiles, setProfiles] = useState([]);
   const [formData, setFormData] = useState(initialFormData);
-  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
   const [show, setShow] = useState(false);
-  const [errors,setErrors] = useState({
-    image: "",
-    full_name: "",
-    user: "",
-    email: "",
-    age: "",
-    location: "",
-    experience: "",
-    bio: "",
-  })
 
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   useEffect(() => {
-    const fetchProfile = async () => {
-      const result = await axios(url);
-      setProfiles(result.data);
-      // console.log(result.data);
-    };
-    fetchProfile();
-  }, []);
+     axiosInstance.get('profiles/').then((res) =>{
+       setProfiles(res.data)
+       console.log(res.data)
+     })
+     .catch((err) => {
+      console.log(err.response.status);
+      console.log(err.response.data)
+    });
+  },[]);
 
   const handleChange = (e) => {
     setFormData({
@@ -114,6 +105,7 @@ function Maids() {
     });
     window.location.reload();
   };
+
 
   return (
     <>

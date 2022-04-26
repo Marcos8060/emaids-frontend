@@ -35,6 +35,10 @@ function Login() {
         axiosInstance.defaults.headers['Authorization'] = 
         'JWT ' + localStorage.getItem('access_token')
         history('/')
+      })
+      .catch((err) => {
+        console.log(err.response.status);
+        console.log(err.response.data);
       });
       }
 
