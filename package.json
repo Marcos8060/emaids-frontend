@@ -1,7 +1,7 @@
 {
   "name": "maids",
   "version": "0.1.0",
-  "homepage": "https://Marcos8060.github.io/emaids-frontend",
+  "homepage": "https://Marcos8060.github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
