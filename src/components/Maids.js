@@ -90,6 +90,7 @@ function Maids() {
       console.log(err.response.status);
       console.log(err.response.data);
     });
+    window.location.reload();
     handleClose();
     if(!formData.full_name || !formData.email || !formData.age || !formData.location || !formData.experience || !formData.bio){
       alert('Please fill in all the fields!')

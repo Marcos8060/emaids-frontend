@@ -52,6 +52,7 @@ function Profile() {
         console.log(err.response.status);
         console.log(err.response.data);
       });
+    window.location.reload();
   };
 
   return (
@@ -96,7 +97,7 @@ function Profile() {
                 </div>
               </div>
               <div className="row card">
-                <h5 className="text-center">My Comments</h5>
+                <h5 className="text-center">Drop a comment below</h5>
                 <div className="col-md-12">
                   <form className="d-flex align-items-center mt-4 mb-4">
                     <input
