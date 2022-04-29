@@ -26,10 +26,9 @@ export default function Navbar() {
                 </li>
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Authentication
+                    My Account
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a className="dropdown-item" href="/maids">Available house maids</a></li>
                     <li><a className="dropdown-item" href="/register">Sign Up</a></li>
                     <li><a className="dropdown-item" href="/login">Login</a></li>
                     <li><a className="dropdown-item" href="/logout">
