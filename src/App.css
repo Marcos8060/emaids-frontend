@@ -16,3 +16,7 @@ body{
   --buttons: #D24257;
   --profile: #F6F9FC;
 }
+.loading{
+  margin-top: 20vh;
+  margin-bottom: 25vh;
+}

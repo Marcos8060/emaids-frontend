@@ -1,10 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useReducer } from "react";
 import "./css/profile.css";
 import axiosInstance from "../axios";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
+import {reducer} from './reducer'
+import Modal from "./Modal";
 
+
+const defaultState = {
+  isModalOpen: false,
+  modalContent: ''
+}
 
 function Profile() {
   const { id } = useParams();
@@ -17,6 +24,7 @@ function Profile() {
   // console.log(initialFormData)
   const [profile, setProfile] = useState([]);
   const [postComment, setPostComment] = useState(initialFormData);
+  const [state,dispatch] = useReducer(reducer,defaultState);
 
   const url = `http://127.0.0.1:8000/api/profiles/${id}/`;
 
@@ -24,7 +32,7 @@ function Profile() {
     const getProfile = async () => {
       const result = await axios(url);
       setProfile(result.data);
-      console.log(result.data);
+      // console.log(result.data);
     };
     getProfile();
   }, []);
@@ -42,7 +50,7 @@ function Profile() {
     axiosInstance.post('comments/',{
         profile: id,
         comment: postComment.comment,
-        user: 1,
+        user: postComment.user,
         // pub_date: postComment.pub_date
     })
     .then((res) =>{
@@ -53,6 +61,9 @@ function Profile() {
         console.log(err.response.data);
       });
     window.location.reload();
+    if(postComment.comment){
+      dispatch({ type: 'ADD_COMMENT'})
+    }
   };
 
   return (
@@ -99,7 +110,8 @@ function Profile() {
               <div className="row card">
                 <h5 className="text-center">Drop a comment below</h5>
                 <div className="col-md-12">
-                  <form className="d-flex align-items-center mt-4 mb-4">
+                  {state.isModalOpen && <Modal modalContent={state.modalContent} />}
+                  <form onSubmit={handleSubmit} className="d-flex align-items-center mt-4 mb-4">
                     <input
                       type="text"
                       className="form-control comment__input"
@@ -110,7 +122,6 @@ function Profile() {
                     <button
                       type="submit"
                       className="btn4"
-                      onClick={handleSubmit}
                     >
                       Post
                     </button>
@@ -122,7 +133,7 @@ function Profile() {
                       <div key={comment.id}>
                         <p className="comment__text">{comment.comment}</p>
                         <div className="d-flex align-items-center justify-content-between">
-                          <p className="user text-muted">By {comment.user}</p>
+                          <p className="user text-muted">By {comment.user.username}</p>
                           <p className="date text-muted">
                             {/* {comment.pub_date} */}
                           </p>

@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const history = useNavigate();
   const initialFormData = Object.freeze({
-    email : '',
+    username : '',
     password : '',
    })
 
@@ -26,7 +26,7 @@ function Login() {
       console.log(formData);
   
       axiosInstance.post('token/',{
-        email : formData.email,
+        username : formData.username,
         password : formData.password
       })
       .then((res) =>{
@@ -52,12 +52,12 @@ function Login() {
               <p className='text-center'><AccountCircleIcon /></p>
               <h3 className='text-center'>Login</h3>
               <form>
-                <label htmlFor="email" className="form-label">Email</label>
+                <label htmlFor="email" className="form-label">Username</label>
                 <input 
-                   name='email'
-                   type="email" 
+                   name='username'
+                   type="text" 
                    className="form-control input1" 
-                   placeholder='email...' 
+                   placeholder='username...' 
                    onChange={handleChange}
                    />
                 <label htmlFor="password" className="form-label">Password</label>

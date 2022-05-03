@@ -17,7 +17,7 @@
     height: 70px;
     width: 70px;
     border-radius: 999px;
-    object-fit: cover;
+    object-fit: contain;
 }
 .btn2{
     background: transparent;

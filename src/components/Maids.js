@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { Modal } from "react-bootstrap";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import Loading from "./Loading";
 
 const MySwal = withReactContent(Swal)
 
@@ -31,21 +32,31 @@ function Maids() {
   const [formData, setFormData] = useState(initialFormData);
   const [status, setStatus] = useState("");
   const [show, setShow] = useState(false);
+  const [loading,setLoading] = useState(true)
 
 
+  
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   useEffect(() => {
+    setLoading(true)
      axiosInstance.get('profiles/').then((res) =>{
        setProfiles(res.data)
        console.log(res.data)
+       setLoading(false)
      })
      .catch((err) => {
       console.log(err.response.status);
       console.log(err.response.data)
     });
   },[]);
+
+  if(loading){
+    return(
+      <Loading />
+    )
+  }
 
   const handleChange = (e) => {
     setFormData({
@@ -133,7 +144,7 @@ function Maids() {
             {profiles.map((profile) => (
               <div className="col-md-3 text-center" key={profile.id}>
                 <div className="item">
-                    <img className="profile__img" src={profile.image} alt="" />
+                    <img className="profile__img" src={"https://nairobi-maids.herokuapp.com/" + profile.image} alt="" />
                     <h4 className="text-center">{profile.full_name}</h4>
                     <p>Age : {profile.age}</p>
                     <p>Location : {profile.location}</p>

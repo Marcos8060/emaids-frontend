@@ -8,7 +8,7 @@ function Register() {
   const history = useNavigate()
   const initialFormData = Object.freeze({  
     email: '',
-    user_name: '',
+    username: '',
     password: ''
    })
    const [formData , updateFormData ] = useState(initialFormData)
@@ -25,7 +25,7 @@ function Register() {
 
       axiosInstance.post(`register/`,{
           email: formData.email,
-          user_name: formData.user_name,
+          username: formData.username,
           password : formData.password
       })
       .then((res) => {
@@ -54,7 +54,7 @@ function Register() {
               <input 
                   type="text" 
                   className="form-control input1" 
-                  name='user_name'
+                  name='username'
                   placeholder='username...' 
                   onChange={handleChange}
                   />
