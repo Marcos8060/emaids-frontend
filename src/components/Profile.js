@@ -26,7 +26,7 @@ function Profile() {
   const [postComment, setPostComment] = useState(initialFormData);
   const [state,dispatch] = useReducer(reducer,defaultState);
 
-  const url = `http://127.0.0.1:8000/api/profiles/${id}/`;
+  const url = `https://nairobi-maids.herokuapp.com/api/profiles/${id}/`;
 
   useEffect(() => {
     const getProfile = async () => {
@@ -47,7 +47,7 @@ function Profile() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axiosInstance.post('comments/',{
+    axiosInstance.post('https://nairobi-maids.herokuapp.com/api/comments/',{
         profile: id,
         comment: postComment.comment,
         user: postComment.user,
