@@ -144,7 +144,7 @@ function Maids() {
             {profiles.map((profile) => (
               <div className="col-md-3 text-center" key={profile.id}>
                 <div className="item">
-                    <img className="profile__img" src={"https://nairobi-maids.herokuapp.com/" + profile.image} alt="" />
+                    <img className="profile__img" src={profile.image} alt="" />
                     <h4 className="text-center">{profile.full_name}</h4>
                     <p>Age : {profile.age}</p>
                     <p>Location : {profile.location}</p>
